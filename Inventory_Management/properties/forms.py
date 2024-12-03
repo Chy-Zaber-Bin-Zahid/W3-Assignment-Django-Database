@@ -4,11 +4,12 @@ from django.contrib.auth.models import User
 
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField()
-    phone_number = forms.CharField(max_length=15, required=True)  # New field
+    first_name = forms.CharField(max_length=15, required=True)  # New field
+    last_name = forms.CharField(max_length=15, required=True)  # New field
     
     class Meta:
         model = User
-        fields = ('username', 'email', 'password1', 'password2', 'phone_number')  # Include phone_number in the fields
+        fields = ('username', 'email', 'first_name', 'last_name')
 
     def save(self, commit=True):
         user = super().save(commit=False)
