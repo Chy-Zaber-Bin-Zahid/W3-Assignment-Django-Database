@@ -1,0 +1,30 @@
+services:
+  db:
+    image: postgis/postgis:latest
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: zaber47
+      POSTGRES_PASSWORD: zaber47
+      POSTGRES_DB: inventory-management-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    container_name: inventory_management
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=zaber47
+      - POSTGRES_PASSWORD=zaber47
+      - POSTGRES_DB=inventory-management-db
+
+volumes:
+  postgres_data:
