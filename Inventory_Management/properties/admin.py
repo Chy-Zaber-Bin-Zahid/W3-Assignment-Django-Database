@@ -27,12 +27,8 @@ class Accommodation(LeafletGeoAdmin):
     def get_form(self, request, obj=None, **kwargs):
         """Customize the form to automatically set and disable the user field."""
         form = super().get_form(request, obj, **kwargs)
-
-        if not request.user.is_superuser:
-            # Automatically set the user field to the logged-in user and disable it
-            form.base_fields['user'].initial = request.user
-            form.base_fields['user'].disabled = True
-
+        form.base_fields['user'].initial = request.user
+        form.base_fields['user'].disabled = True
         return form
 
     
