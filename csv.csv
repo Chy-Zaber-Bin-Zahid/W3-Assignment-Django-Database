@@ -1,0 +1,4 @@
+id,title,location_type,country_code,state_abbr,city,latitude,longitude
+1,New York,city,US,NY,New York,40.7128,-74.0060
+2,Los Angeles,city,US,CA,Los Angeles,34.0522,-118.2437
+3,Chicago,city,US,IL,Chicago,41.8781,-87.6298

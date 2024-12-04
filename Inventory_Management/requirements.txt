@@ -14,3 +14,4 @@ urllib3
 pytest
 pytest-django
 pytest-cov
+django-import-export

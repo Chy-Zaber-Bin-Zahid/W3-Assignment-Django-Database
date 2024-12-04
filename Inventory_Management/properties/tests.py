@@ -2,9 +2,8 @@ import pytest
 from django.contrib.gis.geos import Point
 from properties.models import Location, Accommodation, LocalizeAccommodation
 from django.urls import reverse
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User
 from django.test import Client
-from django.contrib.auth import get_user_model
 
 @pytest.mark.django_db
 class TestLocationModel:

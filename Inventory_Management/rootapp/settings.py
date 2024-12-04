@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'leaflet',
     'pytest_django',
+    'import_export',
 ]
 
 MIDDLEWARE = [
