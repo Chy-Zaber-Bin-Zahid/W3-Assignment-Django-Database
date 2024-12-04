@@ -8,14 +8,14 @@ from .models import Location, Accommodation, LocalizeAccommodation
 class LocationResource(resources.ModelResource):
     class Meta:
         model = Location  # Use the Location model
-        fields = ('id', 'title', 'location_type', 'country_code', 'state_abbr', 'city', 'latitude', 'longitude')  # Define which fields to import/export
+        fields = ('id', 'title', 'location_type', 'country_code', 'state_abbr', 'city', 'center')  # Define which fields to import/export
 
 
 @admin.register(Location)
 class Location(LeafletGeoAdmin, ImportExportModelAdmin):
     resource_class = LocationResource
 
-    list_display = ('id', 'title', 'location_type', 'country_code', 'state_abbr', 'city')
+    list_display = ('id', 'title', 'location_type', 'country_code', 'state_abbr', 'city', 'center')
     search_fields = ('title', 'country_code', 'state_abbr', 'city')
     list_filter = ('location_type', 'country_code')
 
