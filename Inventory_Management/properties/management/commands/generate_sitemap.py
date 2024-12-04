@@ -26,7 +26,7 @@ class Command(BaseCommand):
 
         # Convert to the desired JSON structure
         sitemap_list = [
-            {"country": country, "slug": data["slug"], "locations": data["locations"]}
+            {"country": country, "locations": data["locations"]}
             for country, data in sitemap_data.items()
         ]
 

@@ -1,13 +1,37 @@
 [
     {
-        "country": "AS",
-        "slug": "as",
+        "country": "BG",
         "locations": [
             {
-                "sadasd": "as/sadasd"
+                "Bangladesh": "bg/bangladesh"
             },
             {
-                "sdrasda": "as/sdrasda"
+                "Bangladesh": "bg/bangladesh"
+            },
+            {
+                "Khulna": "bg/khulna"
+            },
+            {
+                "Khulna": "bg/khulna"
+            },
+            {
+                "Kuet": "bg/kuet"
+            }
+        ]
+    },
+    {
+        "country": "IN",
+        "locations": [
+            {
+                "India": "in/india"
+            }
+        ]
+    },
+    {
+        "country": "BD",
+        "locations": [
+            {
+                "Khulna": "bd/khulna"
             }
         ]
     }

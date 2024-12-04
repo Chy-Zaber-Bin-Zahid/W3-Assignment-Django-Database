@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'properties',
     'django.contrib.gis',
     'leaflet',
+    'pytest_django',
 ]
 
 MIDDLEWARE = [
