@@ -4,10 +4,12 @@ from django.views import View
 from .forms import CustomUserCreationForm
 from django.contrib.auth.models import Group 
 
+
 class SignUpView(View):
     def get(self, request):
         form = CustomUserCreationForm()
         return render(request, 'signUp.html', {'form': form})
+
 
     def post(self, request):
         form = CustomUserCreationForm(request.POST)

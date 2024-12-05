@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.gis.db import models as geomodels  # For spatial fields
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 class Location(models.Model):
     id = models.CharField(max_length=20, primary_key=True)  # Unique ID

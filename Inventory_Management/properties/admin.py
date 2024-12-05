@@ -14,7 +14,6 @@ class LocationResource(resources.ModelResource):
 @admin.register(Location)
 class Location(LeafletGeoAdmin, ImportExportModelAdmin):
     resource_class = LocationResource
-
     list_display = ('id', 'title', 'location_type', 'country_code', 'state_abbr', 'city', 'center')
     search_fields = ('title', 'country_code', 'state_abbr', 'city')
     list_filter = ('location_type', 'country_code')
@@ -27,6 +26,7 @@ class Accommodation(LeafletGeoAdmin):
     search_fields = ('title', 'country_code', 'location__title')
     ordering = ('-created_at',)
 
+
     def get_queryset(self, request):
         """Limit queryset to show only accommodations created by the logged-in user for Property Owners."""
         query = super().get_queryset(request)
@@ -34,6 +34,7 @@ class Accommodation(LeafletGeoAdmin):
             # Show only the accommodations created by the logged-in user
             return query.filter(user=request.user)
         return query
+
 
     def get_form(self, request, obj=None, **kwargs):
         """Customize the form to automatically set and disable the user field."""
