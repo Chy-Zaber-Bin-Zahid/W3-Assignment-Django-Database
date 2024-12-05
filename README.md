@@ -47,7 +47,11 @@ Go to django admin dashboard `http://127.0.0.1:8000/admin/` and login as admin. 
 
 ## Sign Up Request
 
-Go to this url `http://127.0.0.1:8000` and create an account. After creating account you will be redirect to login page of django admin.
+Go to this url `http://127.0.0.1:8000` and create an account. After creating account you will be redirect to login page of django admin dashboard.
+
+Admin needs to give permission to user by clicking the checkbox `Staff status` and save in-order to allow user to login to django admin dashboard
+
+![alt text](image-3.png)
 
 ## Testing Using Pytest
 **Run The Following Command From `Inventory_Management` Directory
