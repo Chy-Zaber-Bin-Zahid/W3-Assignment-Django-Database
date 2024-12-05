@@ -51,7 +51,7 @@ class Accommodation(models.Model):
         null=True, 
         blank=True,
     )
-    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)  # ForeignKey to Django's auth_user
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)   # ForeignKey to Django's auth_user
     published = models.BooleanField(default=False)  # Boolean to indicate if the accommodation is published
     created_at = models.DateTimeField(auto_now_add=True)  # Creation timestamp
     updated_at = models.DateTimeField(auto_now=True)  # Last update timestamp

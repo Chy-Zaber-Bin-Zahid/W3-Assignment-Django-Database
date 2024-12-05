@@ -11,3 +11,7 @@ requests
 sqlparse
 typing_extensions
 urllib3
+pytest
+pytest-django
+pytest-cov
+django-import-export
