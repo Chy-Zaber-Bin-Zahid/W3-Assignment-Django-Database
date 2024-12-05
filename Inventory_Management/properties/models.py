@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.gis.db import models as geomodels  # For spatial fields
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 class Location(models.Model):
     id = models.CharField(max_length=20, primary_key=True)  # Unique ID
@@ -51,7 +52,7 @@ class Accommodation(models.Model):
         null=True, 
         blank=True,
     )
-    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)  # ForeignKey to Django's auth_user
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)   # ForeignKey to Django's auth_user
     published = models.BooleanField(default=False)  # Boolean to indicate if the accommodation is published
     created_at = models.DateTimeField(auto_now_add=True)  # Creation timestamp
     updated_at = models.DateTimeField(auto_now=True)  # Last update timestamp

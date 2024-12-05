@@ -1,0 +1,4 @@
+id,title,location_type,country_code,state_abbr,city,center
+1,New York,city,US,NY,New York,SRID=4326;POINT (65.59375 23.241346)
+2,Los Angeles,city,US,CA,Los Angeles,SRID=4326;POINT (88.59375 23.241346)
+3,Chicago,city,US,IL,Chicago,SRID=4326;POINT (88.59375 67.241346)

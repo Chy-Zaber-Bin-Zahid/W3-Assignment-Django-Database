@@ -1,0 +1,38 @@
+[
+    {
+        "country": "US",
+        "locations": [
+            {
+                "Chicago": "us/chicago"
+            },
+            {
+                "Los Angeles": "us/los angeles"
+            },
+            {
+                "New York": "us/new york"
+            }
+        ]
+    },
+    {
+        "country": "BD",
+        "locations": [
+            {
+                "Khulna": "bd/khulna"
+            }
+        ]
+    },
+    {
+        "country": "BG",
+        "locations": [
+            {
+                "Khulna": "bg/khulna"
+            },
+            {
+                "Khulna": "bg/khulna"
+            },
+            {
+                "Kuet": "bg/kuet"
+            }
+        ]
+    }
+]
