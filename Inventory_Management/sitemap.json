@@ -1,29 +1,15 @@
 [
     {
-        "country": "BG",
+        "country": "US",
         "locations": [
             {
-                "Bangladesh": "bg/bangladesh"
+                "Chicago": "us/chicago"
             },
             {
-                "Bangladesh": "bg/bangladesh"
+                "Los Angeles": "us/los angeles"
             },
             {
-                "Khulna": "bg/khulna"
-            },
-            {
-                "Khulna": "bg/khulna"
-            },
-            {
-                "Kuet": "bg/kuet"
-            }
-        ]
-    },
-    {
-        "country": "IN",
-        "locations": [
-            {
-                "India": "in/india"
+                "New York": "us/new york"
             }
         ]
     },
@@ -32,6 +18,20 @@
         "locations": [
             {
                 "Khulna": "bd/khulna"
+            }
+        ]
+    },
+    {
+        "country": "BG",
+        "locations": [
+            {
+                "Khulna": "bg/khulna"
+            },
+            {
+                "Khulna": "bg/khulna"
+            },
+            {
+                "Kuet": "bg/kuet"
             }
         ]
     }
