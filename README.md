@@ -26,7 +26,10 @@ docker-compose down
 ```
 **Build And Run The Docker**
 ```
-docker-compose up --build
+docker-compose build
+```
+```
+docker-compose up -d
 ```
 **Update The Model Using The Below Commands**
 ```
