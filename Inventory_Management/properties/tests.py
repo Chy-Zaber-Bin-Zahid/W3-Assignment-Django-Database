@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django.test import Client
 
+
 @pytest.mark.django_db
 class TestLocationModel:
     def test_create_location(self):
@@ -21,6 +22,7 @@ class TestLocationModel:
         assert location.center.y == 23.8103
         assert location.location_type == "city"
         assert location.country_code == "BD"
+
 
     def test_location_hierarchy(self):
         parent = Location.objects.create(
@@ -75,6 +77,7 @@ class TestAccommodationModel:
         assert accommodation.location == location
         assert accommodation.user == user
 
+
     def test_accommodation_default_values(self):
         location = Location.objects.create(
             id="loc2",
@@ -126,13 +129,13 @@ class TestLocalizeAccommodationModel:
         assert localized_accommodation.description == "A luxury hotel with excellent amenities."
         assert localized_accommodation.policy == {"check-in": "2 PM", "check-out": "12 PM"}
 
+
 @pytest.mark.django_db
 class TestSignUpView:
     def test_sign_up_get(self):
         """Test that the SignUpView returns a valid response for GET requests."""
         client = Client()
         response = client.get(reverse('signup'))  # Assuming the URL for SignUpView is named 'signup'
-
         assert response.status_code == 200
         assert 'form' in response.context  # Check that the context contains the form
         assert 'signUp.html' in [t.name for t in response.templates]  # Check if correct template is used
@@ -141,7 +144,6 @@ class TestSignUpView:
     def test_sign_up_post_invalid(self):
         """Test that an invalid POST request returns the form with errors."""
         client = Client()
-
         # Prepare invalid data (passwords do not match)
         data = {
             'username': 'testuser',
@@ -149,26 +151,22 @@ class TestSignUpView:
             'password2': 'wrongpassword',
             'email': 'testuser@example.com',
         }
-
         response = client.post(reverse('signup'), data)
-
         # Ensure that the form is returned with errors
         assert response.status_code == 200
         assert 'form' in response.context
         assert response.context['form'].errors  # Check that there are errors in the form
 
+
     def test_sign_up_post_missing_data(self):
         """Test that missing data returns form errors."""
         client = Client()
-
         # Prepare incomplete data (missing password)
         data = {
             'username': 'testuser',
             'email': 'testuser@example.com',
         }
-
         response = client.post(reverse('signup'), data)
-
         # Ensure that the form is returned with errors
         assert response.status_code == 200
         assert 'form' in response.context
